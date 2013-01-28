@@ -1,4 +1,9 @@
 Fakebook::Application.routes.draw do
+  get "hello_world/index"
+
+  get 'outra-coisa' => 'hello_world#index'
+  get 'outra-url' => 'hello_world#teste'
+
   get 'frontend/:template' => 'frontend#show'
 
   get 'frontend(/index)' => 'frontend#index'
